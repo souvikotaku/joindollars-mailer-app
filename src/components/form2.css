@@ -1,0 +1,11 @@
+@media (orientation: portrait) {
+  .formcard {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) {
+  .formcard {
+    width: 20%;
+  }
+}
