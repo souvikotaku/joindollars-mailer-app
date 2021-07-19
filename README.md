@@ -1,5 +1,10 @@
 Its a full stack mailer app i made for my friend to send invites to people for his slack group. I used firebase for the backend to receive the details filled in the form and emailJs to send mails to the person filling the form. Check out the app here https://joindollars-mailerapp.netlify.app/
 
+# Steps to use this app
+
+1) Fill up the form and click on submit.
+2) You will receive an invite to join the mysterious slack group called The Dollars.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
