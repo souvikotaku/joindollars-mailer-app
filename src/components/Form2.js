@@ -5,6 +5,7 @@ import { Form, Card, Input, Button, notification } from "antd";
 import "antd/dist/antd.css";
 import emailjs from "emailjs-com";
 import "./form2.css";
+import axios from "axios";
 
 const { TextArea } = Input;
 
@@ -31,6 +32,8 @@ export default function Form2() {
       todoRef.push(todo);
       console.log(todo);
 
+      //send invite email to the ones filling the form
+
       emailjs
         .send(
           "service_3rn207d",
@@ -38,6 +41,17 @@ export default function Form2() {
           todo,
           "user_PRZMj8M9O77zh8KiQnnsu"
         )
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      //send email to the admin which consists of the form data
+
+      axios
+        .post("https://formsubmit.co/ajax/masaomikanaguchi@email.com", todo)
         .then((res) => {
           console.log(res);
         })
@@ -160,6 +174,7 @@ export default function Form2() {
             </Col>
           </Row>
         </Form>
+
         <p style={{ color: "white" }}>made by Souvik Das</p>
       </Card>
     </div>
