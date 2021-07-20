@@ -51,7 +51,7 @@ export default function Form2() {
       //send email to the admin which consists of the form data
 
       axios
-        .post("https://formsubmit.co/ajax/masaomikanaguchi@email.com", todo)
+        .post("https://formsubmit.co/ajax/masaomikanaguchi@gmail.com", todo)
         .then((res) => {
           console.log(res);
         })
